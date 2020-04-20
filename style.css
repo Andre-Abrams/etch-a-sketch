@@ -1,0 +1,24 @@
+:root {
+  --grid-cols: 1;
+  --grid-rows: 1;
+}
+
+#container {
+  display: grid;
+  justify-self: center;
+  margin: auto;
+  margin-top: 5px;
+  width: 80vh;
+  height: 80vh;
+  max-height: 82vh;
+  max-width: 82vh;
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+}
+
+.grid-item {
+  padding: 1px;
+  border: 1px solid #ddd;
+  min-width: 0;
+  min-height: 0;
+}
