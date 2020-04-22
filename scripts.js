@@ -58,7 +58,7 @@ colorButton.addEventListener("click", e => {
   gridColor = 'rgb'
 });
 
-// changes box colors to rgb
+// changes box colors to black
 const blackButton = document.getElementById("black");
 blackButton.addEventListener("click", e => {
   gridColor = ''
