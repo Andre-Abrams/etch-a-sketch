@@ -3,6 +3,25 @@
   --grid-rows: 1;
 }
 
+body{
+  background: rgb(174,238,227);
+  background: radial-gradient(circle, rgba(174,238,227,1) 0%, rgba(148,187,233,1) 100%); 
+}
+
+button{
+  color: #4386fb;
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 0 12px;
+  font-size: 12px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
 #container {
   display: grid;
   justify-self: center;
@@ -17,6 +36,7 @@
 }
 
 .grid-item {
+  background-color: snow;
   padding: 1px;
   border: 1px solid #ddd;
   min-width: 0;

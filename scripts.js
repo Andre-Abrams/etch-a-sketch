@@ -1,4 +1,5 @@
 const container = document.getElementById("container");
+let gridColor = '';
 
 // makes grid based on number of rows/cols entered
 function drawGrid(rows, cols) {
@@ -23,7 +24,12 @@ function etch() {
   let gridItems = document.querySelectorAll(".grid-item");
   gridItems.forEach(gridItem => {
     gridItem.addEventListener("mouseover", e => {
-      gridItem.style.backgroundColor = "black";
+      if (gridColor == 'rgb'){
+        gridItem.style.backgroundColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+      }else{
+        gridItem.style.backgroundColor = "black";
+      }
+
     });
   });
 }
@@ -46,4 +52,14 @@ resetButton.addEventListener("click", e => {
   etch();
 });
 
+// changes box colors to rgb
+const colorButton = document.getElementById("rgb");
+colorButton.addEventListener("click", e => {
+  gridColor = 'rgb'
+});
 
+// changes box colors to rgb
+const blackButton = document.getElementById("black");
+blackButton.addEventListener("click", e => {
+  gridColor = ''
+});
